@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    transition: 0.3s ease;
+  }
+  .container:hover{
+    transform: scale(1.03);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  #quote {
+    font-size: 1.33em;
+    color: #555;
+    margin: 20px 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+
+</style>
+<body>
+<div class="container">
+
+  <h1>Inspirational Quote Generator</h1>
+  <div id="quote">Click the button to get a quote!</div>
+  <button id="quoteBtn">Get Quote</button>
+
+  </div>
+
+  <script>
+
+  const quotes = [
+    "The best way to get started is to quit talking and begin doing. - Walt Disney",
+    "Don't let yesterday take up too much of today. - Will Rogers",
+    "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+    "If you are working on something exciting, it will keep you motivated. - Amelia Earhart",
+    "Success is not in what you have, but who you are. - Bo Bennett",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Dream big and dare to fail. - Norman Vaughan",
+    "Your limitation—it's only your imagination.",
+    "Push yourself, because no one else is going to do it for you.",
+    "Great things never come from comfort zones.",
+    "The only limit to our realization of tomorrow is our doubts of today. - Franklin D. Roosevelt",
+    "What lies behind us and what lies before us are tiny matters compared to what lies within us. - Ralph Waldo Emerson",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+    "Your time is limited, so don’t waste it living someone else’s life. - Steve Jobs",
+    "The purpose of our lives is to be happy. - Dalai Lama",
+    "Hard work beats talent when talent doesn’t work hard. - Tim Notke",
+    "The future depends on what you do today. - Mahatma Gandhi",
+    "Don’t wait. The time will never be just right. - Napoleon Hill",
+    "Every moment is a fresh beginning. - T.S. Eliot",
+    "Act as if what you do makes a difference. It does. - William James",
+    "Opportunities don't happen, you create them. - Chris Grosser",
+    "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
+    "Don’t count the days, make the days count. - Muhammad Ali",
+    "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. - Christian D. Larson"
+  ];
+
+  const btn = document.getElementById('quoteBtn');
+  const quoteDiv = document.getElementById('quote');
+
+  btn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteDiv.textContent = quotes[randomIndex];
+  });
+
+  </script>
+
+</body>
+</html>
